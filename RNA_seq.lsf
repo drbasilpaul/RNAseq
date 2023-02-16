@@ -1,0 +1,20 @@
+#!/bin/bash
+#this script will be used to analyse the 4E RNAseq data analysis 
+
+#BSUB -J 4E-rnaseq01
+#BSUB -W 24:00
+#BSUB -o /rsrch3/scratch/anesth/bpaul/js-rnaseq01/aligned
+#BSUB -e /rsrch3/scratch/anesth/bpaul/js-rnaseq01/aligned
+#BSUB –cwd /home/bpaul/js-rnaseq01
+#BSUB -q medium
+#BSUB –u bpaul@mdanderson.org
+#BSUB –n 124
+#BSUB -M 248
+#BSUB -R rusage[mem=248]
+## All of the above are required except –J.
+## All commands below should be valid Linux commands
+
+source rnaseq01_bp.sh
+
+# RNAseq data analysis
+
